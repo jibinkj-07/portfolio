@@ -7,7 +7,7 @@ export default function Home() {
         <div className={""}>
             <StarField/>
             <Header/>
-            <main className={"max-w-7xl mx-auto"}>
+            <main className={"max-w-6xl mx-auto"}>
                 <Hero/>
             </main>
         </div>

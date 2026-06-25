@@ -20,20 +20,20 @@ export default function Hero() {
                     }
                 >
                     <TypingText
-                        speed={50}
+                        speed={40}
                         segments={[
                             {text: "Building software that "},
                             {
                                 text: "solves real problems",
                                 className: "text-blue-500 font-medium",
                             },
-                            {text: " through engineering precision."},
+                            {text: " through engineering precision"},
                         ]}
                     />
                 </h1>
 
                 <DelayedMotion
-                    delay={5}
+                    delay={4}
                     as="p"
                     className="text-center text-lg text-muted-foreground"
                 >
@@ -47,7 +47,7 @@ export default function Hero() {
           </span>
                 </DelayedMotion>
 
-                <DelayedMotion delay={5} as="div">
+                <DelayedMotion delay={4} as="div">
                     <div className={"mt-5 flex flex-col md:flex-row gap-2"}>
                         <Button className={"px-6 py-5"}>Explore Projects</Button>
 

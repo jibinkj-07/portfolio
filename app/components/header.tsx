@@ -42,7 +42,7 @@ export default function Header() {
         >
             <div
                 className={cn(
-                    "h-full w-full max-w-400 mx-auto px-4",
+                    "h-full w-full max-w-350 mx-auto px-4",
                     "flex items-center justify-between",
                 )}
             >
