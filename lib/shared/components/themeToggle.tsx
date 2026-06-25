@@ -21,7 +21,7 @@ export function ThemeToggle() {
     return (
         <Button
             size="icon"
-            variant="outline"
+            variant="secondary"
             onClick={() => setTheme(isDark ? "light" : "dark")}
             className="relative overflow-hidden"
         >

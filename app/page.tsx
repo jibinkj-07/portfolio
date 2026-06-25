@@ -1,11 +1,15 @@
 import StarField from "@/lib/shared/components/startField";
-import {ThemeToggle} from "@/lib/shared/components/themeToggle";
+import Header from "@/app/components/header";
+import Hero from "@/app/components/hero";
 
 export default function Home() {
     return (
-        <div className={"p-4 max-w-7xl mx-auto"}>
+        <div className={""}>
             <StarField/>
-            <ThemeToggle/>
+            <Header/>
+            <main className={"max-w-7xl mx-auto"}>
+                <Hero/>
+            </main>
         </div>
     );
 }
