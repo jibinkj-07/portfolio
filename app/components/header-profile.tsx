@@ -1,6 +1,6 @@
 "use client";
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {AppData} from "@/lib/constants/app-data";
@@ -12,6 +12,31 @@ import {X} from "lucide-react";
 export default function HeaderProfile() {
     const [open, setOpen] = useState(false);
 
+    useEffect(() => {
+        const html = document.documentElement;
+        const body = document.body;
+
+        if (open) {
+            html.style.overflow = "hidden";
+            body.style.overflow = "hidden";
+            body.style.position = "fixed";
+            body.style.width = "100%";
+        } else {
+            html.style.overflow = "";
+            body.style.overflow = "";
+            body.style.position = "";
+            body.style.width = "";
+        }
+
+        return () => {
+            html.style.overflow = "";
+            body.style.overflow = "";
+            body.style.position = "";
+            body.style.width = "";
+        };
+    }, [open]);
+
+    
     return (
         <>
             <div
@@ -56,7 +81,7 @@ export default function HeaderProfile() {
                             <Image
                                 src={AppData.profileURL}
                                 alt="Preview"
-                                className="h-85 md:h-110 w-full shadow-xl border rounded-xl"
+                                className="w-full shadow-xl border rounded-xl"
                                 width={400}
                                 height={450}
                                 onClick={(e) => e.stopPropagation()}
@@ -64,14 +89,14 @@ export default function HeaderProfile() {
                             <div className={"w-full flex items-center justify-between"}>
                                 <div>
                                     <h3
-                                        className={"text-sm tracking-widest text-muted-foreground"}
+                                        className={"text-xs tracking-widest text-muted-foreground"}
                                     >
                                         SOFTWARE ENGINEER
                                     </h3>
-                                    <h3 className={"text-xl font-medium"}>Jibin K John</h3>
+                                    <h3 className={"text-lg font-medium"}>Jibin K John</h3>
                                 </div>
 
-                                <div className={"text-sm text-muted-foreground capitalize"}>
+                                <div className={"text-sm text-right text-muted-foreground capitalize"}>
                   <span className={"text-foreground font-bold"}>
                     {Math.max(0, new Date().getFullYear() - 2022)}+
                   </span>{" "}
