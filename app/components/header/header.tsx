@@ -2,7 +2,7 @@
 import {cn} from "@/lib/utils";
 import {ThemeToggle} from "@/lib/shared/components/themeToggle";
 import {useEffect, useState} from "react";
-import HeaderProfile from "@/app/components/header-profile";
+import HeaderProfile from "@/app/components/header/header-profile";
 
 export default function Header() {
     const [visible, setVisible] = useState(true);

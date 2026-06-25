@@ -8,6 +8,7 @@ import Image from "next/image";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+import {AppUtils} from "@/lib/shared/util/app-utils";
 
 export default function HeaderProfile() {
     const [open, setOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function HeaderProfile() {
         };
     }, [open]);
 
-    
+
     return (
         <>
             <div
@@ -98,7 +99,7 @@ export default function HeaderProfile() {
 
                                 <div className={"text-sm text-right text-muted-foreground capitalize"}>
                   <span className={"text-foreground font-bold"}>
-                    {Math.max(0, new Date().getFullYear() - 2022)}+
+                    {AppUtils.getExperience()}+
                   </span>{" "}
                                     yrs exp
                                 </div>
