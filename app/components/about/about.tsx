@@ -41,7 +41,7 @@ export default function About() {
         <section
             id="about"
             ref={ref}
-            className="min-h-screen p-4 flex flex-col gap-8"
+            className="min-h-screen p-4 flex flex-col gap-8 pb-50"
         >
             <SectionTitle title="About"/>
             <motion.div
@@ -54,7 +54,7 @@ export default function About() {
                 style={{scale, opacity}}
             >
                 {/* HEADER */}
-                <div className="bg-muted p-3 grid grid-cols-3 items-center">
+                <div className="bg-muted p-3 grid grid-cols-[.1fr_1fr_.1fr] items-center">
                     <div className="flex gap-2 justify-start">
                         <div className="size-3 rounded-full bg-red-400"/>
                         <div className="size-3 rounded-full bg-amber-400"/>
@@ -62,7 +62,7 @@ export default function About() {
                     </div>
                     <div className="flex justify-center">
             <span className="font-mono text-sm text-muted-foreground">
-              jibterm - zsh
+              jibtermx
             </span>
                     </div>
                 </div>
