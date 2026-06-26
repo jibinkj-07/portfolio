@@ -1,4 +1,5 @@
 import {Globe} from "lucide-react";
+import {FaYoutube} from "react-icons/fa";
 
 export const projectsData = [
     {
@@ -13,6 +14,11 @@ export const projectsData = [
             platform: "web",
             icon: Globe,
             link: "https://workloomapp.com"
+
+        }, {
+            platform: "youtube",
+            icon: FaYoutube,
+            link: "https://youtu.be/IktEYPmdsw4?si=-8O_WO4Ly8Pu-4xX"
 
         }],
         tags: ["Next.js", "Mongo DB", "Express.js", "Redis", "Bull MQ", "Tailwind CSS", "TypeScript", "JWT", "Cloudinary", "Vercel", "Cloud Run"],
