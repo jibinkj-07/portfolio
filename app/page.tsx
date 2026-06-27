@@ -3,6 +3,7 @@ import Header from "@/app/components/header/header";
 import Hero from "@/app/components/hero";
 import About from "@/app/components/about/about";
 import Projects from "@/app/components/projects/projects";
+import History from "@/app/components/history/history";
 
 export default function Home() {
     return (
@@ -11,8 +12,9 @@ export default function Home() {
             <Header/>
             <main className={"max-w-6xl mx-auto"}>
                 <Hero/>
-                <About/>
+                {/*<About/>*/}
                 <Projects/>
+                <History/>
             </main>
         </div>
     );

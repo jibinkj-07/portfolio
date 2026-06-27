@@ -62,7 +62,7 @@ export default function ProjectTile({project}: { project: Project }) {
                             <Badge
                                 key={i}
                                 variant={"secondary"}
-                                className={"p-3 border border-foreground/10"}
+                                className={"p-3 bg-blue-100 dark:bg-blue-200 text-black"}
                             >
                                 {tag}
                             </Badge>
