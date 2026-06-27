@@ -5,55 +5,55 @@ const aboutScript = [
     {
         command: "whoami",
         output: "Jibin K John — Software Engineer",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "cat philosophy.txt",
         output:
             "I focus on building scalable web and mobile applications that people genuinely enjoy using, with an emphasis on clean architecture, developer experience, performance, and intuitive user interfaces. I’m committed to continuous learning and constantly exploring new technologies to build better software.",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "cat experience.txt",
         output: `${AppUtils.getExperience()}+ years building full-stack products across fintech, IOT-tech, and SaaS domains. From solo projects to cross-functional teams of 15+, I've shipped features that scale.`,
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "cd skills/",
         output: "",
-        delay: 1000,
+        delay: 500,
     },
 
     {
         command: "ls mobile/",
         output:
             "Flutter · Dart · Bloc · Provider · Cloud Architect · Firebase · Hive · MQTT",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "ls frontend/",
         output: "React · Next.js · TypeScript · JavaScript · TailwindCSS",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "ls backend/",
         output: "Node.js · Express.js · REST APIs · JWT · WebSockets · BullMQ",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "ls data_and_cloud/",
         output: "MongoDB · Firebase · GCP · Redis · Vercel · Render",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "ls tools_and_workflows/",
         output: "Git · GitHub · Postman · Figma · VS Code · Android Studio · Grafana",
-        delay: 1000,
+        delay: 500,
     },
     {
         command: "echo location",
         output: "Ireland",
-        delay: 1000,
+        delay: 500,
     },
 ];
 
@@ -104,7 +104,7 @@ export default function Terminal({ready = false}: TerminalProps) {
                 setLines((prev) => [...prev, {type: "command", text: ""}]);
                 await typeText(
                     item.command,
-                    80,
+                    40,
                     (partial) => {
                         if (isCancelled()) return;
                         setLines((prev) => {
@@ -123,7 +123,7 @@ export default function Terminal({ready = false}: TerminalProps) {
                 await sleep(item.delay);
                 if (isCancelled()) return;
                 setLines((prev) => [...prev, {type: "output", text: item.output}]);
-                await sleep(500);
+                await sleep(200);
             }
             setTyping(false);
         };
