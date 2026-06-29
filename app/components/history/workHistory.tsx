@@ -28,8 +28,8 @@ export default function WorkHistory() {
   return (
     <section
       ref={secRef}
-      id="history"
-      className="absolute left-0 right-0 min-h-screen my-20 bg-primary/10 p-4 shadow py-12"
+      id="work-history"
+      className="relative left-1/2 right-1/2 mx-[-50vw] w-screen my-20 bg-primary/10 p-4 shadow py-20"
     >
       <div className="max-w-6xl mx-auto flex flex-col gap-20">
         <SectionTitle title="Work History" className={"reveal"} />

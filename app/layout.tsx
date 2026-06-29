@@ -22,7 +22,7 @@ export default function RootLayout({
         <html
             lang="en"
             suppressHydrationWarning
-            className={`${inter.variable} antialiased overflow-x-hidden`}
+            className={`${inter.variable} antialiased overflow-x-hidden scroll-smooth`}
         >
         <body>
         <ThemeProvider

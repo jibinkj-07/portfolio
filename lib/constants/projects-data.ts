@@ -98,7 +98,7 @@ export const projectsData: Project[] = [
             {
                 platform: "web",
                 icon: Globe,
-                link: "https://cinegrid-one-vercel.app",
+                link: "https://cinegrid-one.vercel.app",
             },
             {
                 platform: "github",

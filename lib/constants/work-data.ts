@@ -41,6 +41,9 @@ export const workHistory: WorkEntry[] = [
       "Redis",
       "WebSockets",
       "MQTT",
+      "Strpie",
+      "GCP",
+      "Cloud Run",
     ],
   },
   {
