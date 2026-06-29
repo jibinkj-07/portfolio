@@ -68,7 +68,7 @@ export const workHistory: WorkEntry[] = [
     {
         role: "IT Analyst",
         company: "Wipro",
-        location: "On-site, India",
+        location: "Remote, India",
         period: "Sep 2020 – Jan 2023",
         badge: {label: "2 yrs 5 mos", variant: "gray"},
         dot: "muted",
