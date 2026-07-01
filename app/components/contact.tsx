@@ -1,9 +1,12 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Mail, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { useIntersectionObserver } from "@/lib/shared/hooks/useIntersectionObserver";
 
 export default function Contact() {
+  const secRef = useIntersectionObserver();
   const socialLinks = [
     {
       name: "Email",
@@ -33,12 +36,13 @@ export default function Contact() {
 
   return (
     <section
+      ref={secRef}
       id="contact"
       className="min-h-screen py-16 md:py-24 px-4 overflow-hidden"
     >
       <div className="max-w-4xl mx-auto">
         {/* Decorative element */}
-        <div className="relative">
+        <div className="reveal relative" style={{ transitionDelay: `0.08s` }}>
           <div className="relative bg-linear-to-br from-primary to-primary/90 rounded-3xl shadow-2xl overflow-hidden">
             {/* Subtle pattern overlay */}
             <div className="absolute inset-0 opacity-5">
@@ -100,8 +104,6 @@ export default function Contact() {
                   );
                 })}
               </div>
-
-
             </div>
           </div>
         </div>
