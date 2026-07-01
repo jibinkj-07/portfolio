@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import TypingText from "@/lib/shared/animations/typingText";
 import DelayedMotion from "@/lib/shared/animations/delayedMotion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -49,11 +50,23 @@ export default function Hero() {
 
         <DelayedMotion delay={4} as="div">
           <div className={"mt-5 flex flex-col md:flex-row gap-2"}>
-            <Button className={"px-6 py-5"}>Explore Projects</Button>
+            <Link
+              href={"#projects"}
+              className={"flex items-center justify-center"}
+            >
+              <Button className={"px-6 py-5"}>Explore Projects</Button>
+            </Link>
 
-            <Button variant={"outline"} className={"px-6 py-5"}>
-              Resume
-            </Button>
+            <Link
+              href={"/resume"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={"flex items-center justify-center"}
+            >
+              <Button variant={"outline"} className={"px-6 py-5"}>
+                Resume
+              </Button>
+            </Link>
           </div>
         </DelayedMotion>
       </div>
